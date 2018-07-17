@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feed</title>
+</head>
+<body>
+<h1>Alumni</h1>
+    <table>
+        <ul>
+        {% for alumnus in object_list %}
+            <li>{{ alumnus.name }} <a href="{% url 'profile' alumnus.name %}">Visit Profile</a></li>
+        {% empty %}
+            <li>No alumni yet.</li>
+        {% endfor %}
+        </ul>
+    </table>
+</body>
+</html>

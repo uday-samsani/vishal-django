@@ -5,11 +5,12 @@
     <title>Submit</title>
 </head>
 <body>
-<form method="GET">
+<form method="POST">
     {% csrf_token %}
     <table>{{ form.as_table }}</table>
     <input type="submit" value="Submit" name="submit">
     <a href="{% url "index" %}"><input type="submit" value="Cancel" name="cancel"></a>
+
 </form>
 
 </body>
