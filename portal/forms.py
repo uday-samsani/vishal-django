@@ -11,5 +11,7 @@ class AlumniInfoForm(forms.ModelForm):
                 'department',
                 'company',
                 'experience',
-                'location','linkedin','github','working_as','phn_no','description','passed_out',
+                'location','linkedin','github','working_as',
+                'phn_no',
+                'description','passed_out',
         )

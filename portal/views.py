@@ -10,9 +10,12 @@ def index(request):
     return render(request, template_name='index.html',context={'AlumniInfo':count})
     # using template index.html in portal/templates and context i.e. model info is passed out to views render
 
+<<<<<<< HEAD
 def thanks(request):
     return HttpResponse("Thanks")
 
+=======
+>>>>>>> ae56f8457f903acf6de2ce784f04dd88528d439a
 def submit_info(request):
     if request.method=='POST':
         form = AlumniInfoForm(request.POST)

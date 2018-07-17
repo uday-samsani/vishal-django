@@ -1,4 +1,7 @@
 from django.db import models
+<<<<<<< HEAD
+from django.core.validators import RegexValidator
+=======
 experience_choice=(
     ('1','1'),
     ('2','2'),
@@ -20,9 +23,11 @@ dept_choice = (
     ('MECH','MECH'),
     ('CSE','CSE'),
 )
+>>>>>>> 71872f36e16aa8ed1fd8f62c27f96c3385c87f22
 
 
 class AlumniInfo(models.Model):
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$')
     name = models.CharField(max_length=32)
     reg_no = models.CharField(max_length=16)
     mail_id = models.CharField(max_length=32)
@@ -34,7 +39,7 @@ class AlumniInfo(models.Model):
     linkedin = models.CharField(max_length=16)
     github = models.CharField(max_length=16)
     working_as = models.CharField(max_length=16)
-    phn_no = models.CharField(max_length=16, default=0)
+    phn_no = models.CharField(validators=[phone_regex],max_length=16, default=0)
     description = models.TextField(null=True, blank=True)
     passed_out = models.PositiveIntegerField(default=2012)
 
