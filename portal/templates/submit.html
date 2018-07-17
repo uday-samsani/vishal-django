@@ -8,6 +8,8 @@
 <form method="GET">
     {% csrf_token %}
     <table>{{ form.as_table }}</table>
+    <input type="submit" value="Submit" name="submit">
+    <a href="{% url "index" %}"><input type="submit" value="Cancel" name="cancel"></a>
 </form>
 
 </body>
