@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class AlumniInfo(models.Model):
     name = models.CharField(max_length = 32)
     reg_no = models.CharField(max_length = 8)
@@ -13,3 +14,4 @@ class AlumniInfo(models.Model):
     github = models.CharField(max_length=16)
     working_as = models.CharField(max_length=16)
     description = models.TextField(null=True, blank=True)
+
