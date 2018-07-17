@@ -1,7 +1,5 @@
 from django.db import models
-<<<<<<< HEAD
 from django.core.validators import RegexValidator
-=======
 experience_choice=(
     ('1','1'),
     ('2','2'),
@@ -23,7 +21,6 @@ dept_choice = (
     ('MECH','MECH'),
     ('CSE','CSE'),
 )
->>>>>>> 71872f36e16aa8ed1fd8f62c27f96c3385c87f22
 
 
 class AlumniInfo(models.Model):

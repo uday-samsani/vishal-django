@@ -5,20 +5,21 @@
     <title>Vishal</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "portal/portalindex.css" %}">
+    <link rel="stylesheet" href="{% static "portal/" %}"
 </head>
 <body>
 
      <div class="topbar">
          <ul>
              <li><p>Vishal :VISHnu ALumni</p></li>
-             <li><a href="{% url 'submit_info' %}"><input type="submit" value="Are you alumni?"></a></li>
+             <li></li>
          </ul>
      </div>
+     <div class="imageslider">
+
+     </div>
     <div class="content">
-        <h2>Welcome to VISHnu ALumni</h2>
-        <p>
-            Total Alumni : <b> {{ AlumniInfo }}</b>
-        </p>
+        <a href="{% url 'submit_info' %}"><input type="submit" value="Are you alumni?"></a>
     </div>
 </body>
 </html>

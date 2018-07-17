@@ -1,25 +1,10 @@
 *{
-    margin:0;
-    background-color: azure;
+    margin: 0;
+    background-color: darkgray;
 }
-.topbar{
-    background-color: indianred;
-    padding: 1em;
-    width: auto;
-}
-.topbar li{
-    display: inline-block;
-    background-color: indianred;
-}
-
-.topbar ul{
-    background-color: indianred;
-}
-.topbar p{
-    background-color: indianred;
-}
-.topbar input{
-    font-size: 1.5em;
-    background-color: greenyellow;
-    border: 0.5px solid black;
+.content button{
+    size: 2em;
+    font-size: 2em;
+    background-color: darkslategray;
+    color: azure;
 }
