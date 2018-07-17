@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Vishal</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "portal/portalindex.css" %}">
 </head>
 <body>
 
      <div class="topbar">
          <ul>
-             <p>Vishal : alumni</p>
-             <a><input type="submit" value="Are you alumni?"></a>
+             <li><p>Vishal :VISHnu ALumni</p></li>
+             <li><a href="{% url 'submit_info' %}"><input type="submit" value="Are you alumni?"></a></li>
          </ul>
      </div>
     <div class="content">

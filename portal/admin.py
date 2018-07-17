@@ -10,6 +10,6 @@ class AlumniInfoAdmin(admin.ModelAdmin):
                    ]
     list_filter = ['name','company','reg_no'
                   ]
-    search_fields = ['reg_no','name','company','experience','location','passed_out'
+    search_fields = ['reg_no','name','company','experience','location','passed_out','location'
                     ]
 
