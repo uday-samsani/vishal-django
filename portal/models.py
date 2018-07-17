@@ -8,14 +8,14 @@ class AlumniInfo(models.Model):
     degree = models.CharField(max_length=16)
     department = models.CharField(max_length=32)
     company= models.CharField(max_length=64)
-    experience = models.IntegerField(default=0)
+    experience = models.PositiveIntegerField(default=0)
     location = models.CharField(max_length=16)
     linkedin = models.CharField(max_length=16)
     github = models.CharField(max_length=16)
     working_as = models.CharField(max_length=16)
     phn_no = models.CharField(max_length=16, default=0)
     description = models.TextField(null=True, blank=True)
-    passed_out = models.IntegerField(default=2015)
+    passed_out = models.PositiveIntegerField(default=2015)
 
     def __str__(self):
         return "name- {},company- {}".format(self.name,self.company)
