@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Vishal</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static "portal/portalindex.css" %}">
-    <link rel="stylesheet" href="{% static "portal/" %}"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js">
 </head>
 <body>
 
-     <div class="topbar">
-         <ul>
-             <li><p>Vishal :VISHnu ALumni</p></li>
-             <li></li>
-         </ul>
-     </div>
+    <nav class="navbar navbar-light bg-light" style="background-color: lightblue;"><a class="navbar-brand" style="font-size: 2em" href="#">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/Vishnu_Universal_Learning.png" width="40" height="40" class="d-inline-block align-top" alt="">
+    Vishal
+    </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Alumni Search <span class="sr-only">(current)</span></a>
+      </li>
+    </nav>
      <div class="imageslider">
+            <div class="w3-content w3-display-container">
+              <img class="mySlides" src="http://www.icbse.com/colleges/media/clgimg/1-3456561.jpg" style="width:100%">
+              <img class="mySlides" src="http://www.icbse.com/colleges/media/clgimg/1-3592461.jpg" style="width:100%">
+              <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-2)">&#10094;</button>
+              <button class="w3-button w3-black w3-display-right" onclick="plusDivs(2)">&#10095;</button>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
 
+                function plusDivs(n) {
+                  showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  if (n > x.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = x.length}
+                  for (i = 0; i < x.length; i++) {
+                     x[i].style.display = "none";
+                  }
+                  x[slideIndex-1].style.display = "block";
+                }
+            </script>
      </div>
-    <div class="content">
-        <a href="{% url 'submit_info' %}"><input type="submit" value="Are you alumni?"></a>
-    </div>
+    <div class="jumbotron">
+  <h1 class="display-4">Welcome alumni</h1>
+  <p class="lead">Give us you info so that your peers can use it for their development</p>
+  <hr class="my-4">
+  <p>Alumni details are stored here and can be seen by every peer so that they can have a better look at how alumni are now in the industry.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" style="font-size: 1em" href="{% url 'submit_info' %}" role="button">Register here</a>
+  </p>
+</div>
 </body>
 </html>

@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Feed</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js">
 </head>
 <body>
-<h1>Alumni</h1>
-    <table>
-        <ul>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Alumni List</h1>
+    <p class="lead">
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">registration number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mail id</th>
+        <th scope='col'>Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+
         {% for alumnus in object_list %}
-            <li>{{ alumnus.name }} <a href="{% url 'profile' alumnus.name %}">Visit Profile</a></li>
-        {% empty %}
-            <li>No alumni yet.</li>
+            <tr>
+            <td>{{ alumnus.reg_no }}</td>
+            <td>{{ alumnus.name }}</td>
+            <td>{{ alumnus.mail_id }}</td>
+            <td><a href="{% url 'profile' alumnus.name %}">View Profile</a></td>
+            </tr>
         {% endfor %}
-        </ul>
-    </table>
+  </tbody>
+</table>
+    </p>
+  </div>
+</div>
+
 </body>
 </html>

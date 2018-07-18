@@ -11,7 +11,7 @@ def index(request):
     # using template index.html in portal/templates and context i.e. model info is passed out to views render
 
 def thanks(request):
-    return HttpResponse("Thanks")
+    return render(request,template_name='thanks.html',context={})
 
 
 def submit_info(request):
