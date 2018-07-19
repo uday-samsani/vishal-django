@@ -46,7 +46,7 @@ class ListDetailed(DetailView):
 '''
 def profile(request,name1):
 
-   record=AlumniInfo.objects.filter(name=name1)
+   record=AlumniInfo.objects.get(name=name1)
    return render(request,template_name='profile.html',context={'record':record})
    # return HttpResponse('Hi this is a profile of {}'.format(name))
 
