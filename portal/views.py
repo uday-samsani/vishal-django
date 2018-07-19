@@ -10,12 +10,10 @@ def index(request):
     return render(request, template_name='index.html',context={'AlumniInfo':count})
     # using template index.html in portal/templates and context i.e. model info is passed out to views render
 
-<<<<<<< HEAD
 def thanks(request):
     return HttpResponse("Thanks")
 
-=======
->>>>>>> ae56f8457f903acf6de2ce784f04dd88528d439a
+
 def submit_info(request):
     if request.method=='POST':
         form = AlumniInfoForm(request.POST)
@@ -46,9 +44,8 @@ class ListDetailed(DetailView):
         context = super().get_context_data(**kwargs)
         return context
 '''
-def profile(request,name1):
-
-   record=AlumniInfo.objects.filter(name=name1)
+def profile(request,name):
+   record=AlumniInfo.objects.filter(name=name).values()
    return render(request,template_name='profile.html',context={'record':record})
    # return HttpResponse('Hi this is a profile of {}'.format(name))
 

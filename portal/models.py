@@ -1,7 +1,7 @@
 from django.db import models
-<<<<<<< HEAD
+
 from django.core.validators import RegexValidator
-=======
+
 experience_choice=(
     ('1','1'),
     ('2','2'),
@@ -23,25 +23,24 @@ dept_choice = (
     ('MECH','MECH'),
     ('CSE','CSE'),
 )
->>>>>>> 71872f36e16aa8ed1fd8f62c27f96c3385c87f22
+
 
 
 class AlumniInfo(models.Model):
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$')
-    name = models.CharField(max_length=32)
-    reg_no = models.CharField(max_length=16)
-    mail_id = models.CharField(max_length=32)
-    degree = models.CharField(max_length=16,choices=degree_choice)
-    department = models.CharField(max_length=32,choices=dept_choice)
-    company= models.CharField(max_length=64)
+    name = models.CharField(max_length=12)
+    reg_no = models.CharField(max_length=12)
+    mail_id = models.CharField(max_length=12)
+    degree = models.CharField(max_length=12,choices=degree_choice)
+    department = models.CharField(max_length=12,choices=dept_choice)
+    company= models.CharField(max_length=12)
     experience = models.CharField(max_length=2,choices=experience_choice)
-    location = models.CharField(max_length=16)
-    linkedin = models.CharField(max_length=16)
-    github = models.CharField(max_length=16)
-    working_as = models.CharField(max_length=16)
-    phn_no = models.CharField(validators=[phone_regex],max_length=16, default=0)
+    location = models.CharField(max_length=12)
+    linkedin = models.CharField(max_length=12)
+    github = models.CharField(max_length=12)
+    working_as = models.CharField(max_length=12)
+    phn_no = models.CharField(validators=[phone_regex],max_length=12, default=0)
     description = models.TextField(null=True, blank=True)
     passed_out = models.PositiveIntegerField(default=2012)
-
     def __str__(self):
         return "name- {},company- {}".format(self.name,self.company)
