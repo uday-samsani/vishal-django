@@ -2,58 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--Fevicon added-->
+    {% load static %}
+    <link rel="icon" href="{% static 'portal/images/fevicon.png' %}" type="image/png">
+    <!-- Latest compiled and minified CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portal/css/bootstrap.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portal/css/index.css' %}">
+    <!-- jQuery library -->
+    {% load static %}
+    <script src='{% static 'portal/js/jquery.min.js' %}' ></script>
+    <!-- Popper JS -->
+    {% load static %}
+    <script src='{% static 'portal/js/popper.min.js' %}' ></script>
+    <!-- Latest compiled JavaScript -->
+    {% load static %}
+    <script src='{% static 'portal/js/bootstrap.min.js' %}' ></script>
+
     <title>Vishal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js">
 </head>
 <body>
 
-    <nav class="navbar navbar-light bg-light" style="background-color: lightblue;"><a class="navbar-brand" style="font-size: 2em" href="#">
-    <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/Vishnu_Universal_Learning.png" width="40" height="40" class="d-inline-block align-top" alt="">
-    Vishal
-    </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="">Alumni Search <span class="sr-only">(current)</span></a>
-      </li>
-    </nav>
-     <div class="imageslider">
-            <div class="w3-content w3-display-container">
-              <img class="mySlides" src="http://www.icbse.com/colleges/media/clgimg/1-3456561.jpg" style="width:100%">
-              <img class="mySlides" src="http://www.icbse.com/colleges/media/clgimg/1-3592461.jpg" style="width:100%">
-              <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-2)">&#10094;</button>
-              <button class="w3-button w3-black w3-display-right" onclick="plusDivs(2)">&#10095;</button>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div class="col-2">
+                    <a class="navbar-brand" href="#">
+                            {% load static %}
+                            <img src="{% static 'portal/images/logo_head.png' %}" alt="https://upload.wikimedia.org/wikipedia/en/c/c2/Vishnu_Universal_Learning.png" width="100px">
+                        </a>
             </div>
-            <script>
-                var slideIndex = 1;
-                showDivs(slideIndex);
+            <div class="col-sm-8">
+                <h2><b>VISHAL</b></h2>
+                <h4>Vishnu Alumni</h4>
+            </div>
+            <div class="col-sm-2">
+                <h8>Mail : 16pa1a1247@vishnu.edu.in</h8>
+                <h8>Website : <a href="www.vishnu.edu.in">www.vishnu.edu.in</a></h8>
+            </div>
+        </div>
+    </nav>
 
-                function plusDivs(n) {
-                  showDivs(slideIndex += n);
-                }
+    <div class="container mynav">
+        <ul class="nav justify-content-center nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=" #">Alumni</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Faculty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact us</a>
+            </li>
+        </ul>
+    </div>
 
-                function showDivs(n) {
-                  var i;
-                  var x = document.getElementsByClassName("mySlides");
-                  if (n > x.length) {slideIndex = 1}
-                  if (n < 1) {slideIndex = x.length}
-                  for (i = 0; i < x.length; i++) {
-                     x[i].style.display = "none";
-                  }
-                  x[slideIndex-1].style.display = "block";
-                }
-            </script>
-     </div>
-    <div class="jumbotron">
-  <h1 class="display-4">Welcome alumni</h1>
-  <p class="lead">Give us you info so that your peers can use it for their development</p>
-  <hr class="my-4">
-  <p>Alumni details are stored here and can be seen by every peer so that they can have a better look at how alumni are now in the industry.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" style="font-size: 1em" href="{% url 'submit_info' %}" role="button">Register here</a>
-  </p>
-</div>
+    <div class="slider">
+        <div id="imageslider" class="carousel slide container" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#imageslider" data-slide-to="0" class="active"></li>
+              <li data-target="#imageslider" data-slide-to="1"></li>
+              <li data-target="#imageslider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    {% load static %}
+                    <img class="d-block w-100" src="{% static 'portal/images/slider-1.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    {% load static %}
+                    <img class="d-block w-100" src="{%static 'portal/images/slider-2.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    {% load static %}
+                    <img class="d-block w-100" src='{% static 'portal/images/slider-3.jpg' %}' alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#imageslider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#imageslider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="jumbotron">
+                    <h1 class="display-4">Welcome to the family</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <hr class="my-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illum, sunt debitis eos explicabo quae?</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Peek In</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            {% load static %}
+                            <img class="card-img-top" src="{% static 'portal/images/code.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Mission RND</h5>
+                                <p class="card-text">Mission RND is a platform where young programmers come and learn more advanced topics.</p>
+                                <a href="#" class="btn btn-primary">Know more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="mark">
+
+        </div>
+    </div>
 </body>
 </html>
