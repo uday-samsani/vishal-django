@@ -3,18 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Thanks</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js">
+    <!--Fevicon added-->
+    {% load static %}
+    <link rel="icon" href="{% static 'portal/images/fevicon.png' %}" type="image/png">
+    <!-- Latest compiled and minified CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portal/css/bootstrap.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portal/css/index.css' %}">
+    <!-- jQuery library -->
+    {% load static %}
+    <script src='{% static 'portal/js/jquery.min.js' %}' ></script>
+    <!-- Popper JS -->
+    {% load static %}
+    <script src='{% static 'portal/js/popper.min.js' %}' ></script>
+    <!-- Latest compiled JavaScript -->
+    {% load static %}
+    <script src='{% static 'portal/js/bootstrap.min.js' %}' ></script>
+
+    <title>Vishal</title>
 </head>
 <body>
 
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div class="col-2">
+                    <a class="navbar-brand" href="#">
+                            {% load static %}
+                            <img src="{% static 'portal/images/logo_head.png' %}" alt="https://upload.wikimedia.org/wikipedia/en/c/c2/Vishnu_Universal_Learning.png" width="100px">
+                        </a>
+            </div>
+            <div class="col-7">
+                <h2><b>VISHAL</b></h2>
+                <h4>Vishnu Alumni</h4>
+            </div>
+            <div class="col-3">
+                <h8>Mail: 16pa1a1247@vishnu.edu.in</h8>
+                <h8>Website: <a href="www.vishnu.edu.in">www.vishnu.edu.in</a></h8>
+            </div>
+        </div>
+    </nav>
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Thanks</h1>
-        <p class="lead">Thank you very for being part of us. This info would be very helpful for other peers.Hope we see you again.</p>
-      </div>
+    <div class="container mynav">
+        <ul class="nav justify-content-center nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=" #">Alumni</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Faculty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="body">
+        <div class="container">
+
+        </div>
     </div>
 
 

@@ -25,3 +25,11 @@ h2{
 .mynav li{
     padding: 0 0.5em;
 }
+
+.mybut{
+    border-radius: 0;
+}
+.navbar col-3{
+    text-align: right;
+}
+
