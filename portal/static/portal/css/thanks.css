@@ -1,0 +1,38 @@
+.body{
+    padding: 1em;
+}
+h2{
+    color: crimson;
+}
+.active{
+    border-bottom: 2px solid rgb(94, 94, 179);
+}
+
+.li{
+    color: rgb(82, 82, 197);
+}
+.col-8{
+    padding: 1em;
+}
+.col-4{
+    padding: 1em;
+}
+#imageslider{
+    padding: 0.5em 1em;
+    width: 80%;
+    align-self: center;
+}
+.mynav{
+    padding-top: 1em;
+}
+.mynav li{
+    padding: 0 0.5em;
+}
+
+.mybut{
+    border-radius: 0;
+}
+.navbar col-3{
+    text-align: right;
+}
+

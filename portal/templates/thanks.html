@@ -10,7 +10,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'portal/css/bootstrap.min.css' %}">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portal/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/thanks.css' %}">
     <!-- jQuery library -->
     {% load static %}
     <script src='{% static 'portal/js/jquery.min.js' %}' ></script>
@@ -47,7 +47,7 @@
     <div class="container mynav">
         <ul class="nav justify-content-center nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="{% url 'index' %}">Home</a>
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href=" #">Alumni</a>
@@ -65,7 +65,50 @@
     </div>
     <div class="body">
         <div class="container">
-
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron">
+                      <h1 class="display-4">Thank you</h1>
+                      <p class="lead">Thanks for registering to vishal for helping peers. We hope to see you soon enough. We miss you.</p>
+                      <hr class="my-4">
+                      <p>See other things in vishal. Vishal is not only for alumni but also students and faculty.</p>
+                      <p class="lead">
+                        <a class="btn btn-primary btn-lg mybut" href="{% url 'index' %}" role="button">Get around</a>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-group">
+                    <div class="card">
+                        {% load static %}
+                        <img class="card-img-top" src="{% static 'portal/images/card1.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Alumni</h5>
+                            <p class="card-text">See where your seniors stand right now in the industry. Ask them how did they do it in VITB to get there.</p>
+                            <a href="{% url 'index' %}" class="btn btn-primary mybut">Go to</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        {% load static %}
+                        <img class="card-img-top" src="{% static 'portal/images/card2.png' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Student</h5>
+                            <p class="card-text">We are like Family. Students are key part of that family. Get to know each other in family.</p>
+                            <a href="{% url 'index' %}" class="btn btn-primary mybut">Go to</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        {% load static %}
+                        <img class="card-img-top" src="{% static 'portal/images/card3.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Faculty</h5>
+                            <p class="card-text">Teacher is the one who guides shapes the young into a great citizen, engineer, innovator etc.., They are the head of our Vishnu family. Get to know each other of out family.</p>
+                            <a href="{% url 'index' %}" class="btn btn-primary mybut">Go to</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
