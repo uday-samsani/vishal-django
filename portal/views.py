@@ -29,7 +29,7 @@ def submit_info(request):
 class ListFeed(ListView):
 
     model = AlumniInfo
-    paginate_by = 15  # if pagination is desired
+    paginate_by = 15
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
