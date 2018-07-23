@@ -35,7 +35,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <div class="col-2">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{% url 'index' %}">
                             {% load static %}
                             <img src="{% static 'portal/images/logo_head.png' %}" alt="https://upload.wikimedia.org/wikipedia/en/c/c2/Vishnu_Universal_Learning.png" width="100px">
                         </a>
@@ -68,6 +68,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact us</a>
             </li>
+            <li class="nav-item right">
+                <form class="form-inline" method="get" action="url 'search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </li>
         </ul>
     </div>
 
@@ -76,7 +82,7 @@
                 <div class="row">
                     {% for x in object_list %}
                         <div id=" fornames " class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width:18rem;height:20rem;">
                                   <div class="card-body">
                                       <h5 class="card-title">{{ x.name }}</h5>
                                       <h6 class="card-subtitle mb-2 text-muted">{{ x.degree }} - {{ x.department }}</h6>
@@ -84,8 +90,8 @@
                                       <p class="card-text">passed out : {{x.passed_out }}</p>
                                       <div class="card-footer bg-transparent border-success">
                                           <a href="{% url 'profile' x.id %}" class="card-link">View</a>
-                                          <a href="{{ x.github }}" class="card-link">Linkedin</a>
-                                          <a href="{{ x.linkedin }}" class="card-link">Github</a>
+                                          <a href="{{ x.linkedin }}" class="card-link">Linkedin</a>
+                                          <a href="{{ x.github }}" class="card-link">Github</a>
                                       </div>
                                   </div>
                             </div>

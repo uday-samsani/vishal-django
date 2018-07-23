@@ -6,9 +6,7 @@
 </head>
 <body>
 
-    <!--Fevicon added-->
-    {% load static %}
-    <link rel="icon" href="{% static 'portal/images/fevicon.png' %}" type="image/png">
+
     {% load static %}
     <link rel="icon" href="{% static 'portal/images/fevicon.png' %}" type="image/png">
     <!-- Latest compiled and minified CSS -->
@@ -25,6 +23,10 @@
     <!-- Latest compiled JavaScript -->
     {% load static %}
     <script src='{% static 'portal/js/bootstrap.min.js' %}' ></script>
+
+    <!--Fevicon added-->
+    {% load static %}
+    <link rel="icon" href="{% static 'portal/images/fevicon.png' %}" type="image/png">
 
     <title>{{ record.name }} Profile</title>
 </head>
@@ -55,7 +57,7 @@
                 <a class="nav-link " href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=" #">Alumni</a>
+                <a class="nav-link" href=" {% url 'list-feed' %}">Alumni</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Students</a>

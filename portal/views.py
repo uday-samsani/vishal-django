@@ -36,15 +36,6 @@ class ListFeed(ListView):
         context = super().get_context_data(**kwargs)
         return context
 
-'''
-class ListDetailed(DetailView):
-
-    model = AlumniInfo
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-'''
 def profile(request,id):
 
    record=AlumniInfo.objects.get(id=id)
