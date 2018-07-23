@@ -12,9 +12,11 @@ experience_choice=(
     ('+6','+6'),
 )
 degree_choice = (
-    ('B.TECH','B.TECH'),
-    ('M.TECH','M.TECH'),
-    ('MBA','MBA'),
+    ('Bachelor Of Technology','Bachelor Of Technology'),
+    ('Master Of Technology','Master Of Technology'),
+    ('Master Of Buisiness Administration','Master Of Buisiness Administration'),
+    ('Master Of Science','Master Of Science'),
+    ('Btech Dropout','Btech Dropout'),
 )
 dept_choice = (
     ('IT','IT'),
@@ -28,19 +30,19 @@ dept_choice = (
 
 
 class AlumniInfo(models.Model):
-    email_regex = RegexValidator(regex=r'^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}')
+    email_regex = RegexValidator(regex=r'^\w+@[a-zA-Z_.]+?\.[a-zA-Z]{2,6}')
     phn_regex=RegexValidator(regex=r'^[0-9]{10}')
-    regno_regex=RegexValidator(regex=r'^[0-9A-Z-]+')
+    regno_regex=RegexValidator(regex=r'^[0-9A-Z]')
     linkin_regex=RegexValidator(regex=r'^\w+://+www.linkedin.com+')
     git_regex=RegexValidator(regex=r'\w+://github.com+')
-    name = models.CharField(max_length=20)
-    reg_no = models.CharField(max_length=11,validators=[regno_regex])
-    mail_id = models.CharField(max_length=35,validators=[email_regex])
+    name = models.CharField(max_length=36)
+    reg_no = models.CharField(max_length=10,validators=[regno_regex])
+    mail_id = models.CharField(max_length=36,validators=[email_regex])
     degree = models.CharField(max_length=12,choices=degree_choice)
     department = models.CharField(max_length=12,choices=dept_choice)
-    company= models.CharField(max_length=12)
+    company= models.CharField(max_length=36)
     experience = models.CharField(max_length=2,choices=experience_choice)
-    location = models.CharField(max_length=15)
+    location = models.CharField(max_length=64)
     linkedin = models.CharField(max_length=50,validators=[linkin_regex])
     github = models.CharField(max_length=50,validators=[git_regex])
     working_as = models.CharField(max_length=20)
