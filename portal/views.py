@@ -36,6 +36,11 @@ class ListFeed(ListView):
         context = super().get_context_data(**kwargs)
         return context
 
+def listfeed(request):
+    object_list=AlumniInfo.objects.all()
+    return render(request, template_name='ListFeed.html', context={'object_list': object_list})
+
+
 def profile(request,id):
 
    record=AlumniInfo.objects.get(id=id)

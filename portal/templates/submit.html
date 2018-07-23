@@ -48,7 +48,7 @@
                 <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=" #">Alumni</a>
+                <a class="nav-link" href="{% url 'listfeed' %}">Alumni</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Students</a>
@@ -68,7 +68,7 @@
                 <div class=" jumbotron jumbotron-fluid myjumbo">
                     <div class="container">
                         <h2 class="display-4">Register Alumni</h2>
-                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        <p class="lead">Hey alumni register so that we can help peers</p>
                         {# Load the tag library #}
                         {% load bootstrap4 %}
                         <form method="POST">
@@ -85,7 +85,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Vishal</h5>
-                        <p class="card-text">Vishnu alumni is helping all the students get their professional inspiration and knowledge regarding the idustry from you guys. We are providing alot of workshops where alumni guide them and give tips. We also have different other feeds  apart from alumni such as student feed.</p>
+                        <p class="card-text">Vishnu alumni is helping all students get their professional inspiration and knowledge regarding the idustry from you guys. We are providing alot of workshops where alumni guide them and give tips. We also have different other feeds  apart from alumni such as student feed.</p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Alumni feed</li>
