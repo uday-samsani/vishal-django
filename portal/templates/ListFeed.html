@@ -57,7 +57,7 @@
                 <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href=" {% url 'list-feed' %}">Alumni</a>
+                <a class="nav-link active" href=" {% url 'listfeed' %}">Alumni</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Students</a>
@@ -77,12 +77,14 @@
         </ul>
     </div>
 
+
+
     <div class="mybody">
         <div id="names" class="container">
                 <div class="row">
                     {% for x in object_list %}
                         <div id=" fornames " class="col">
-                            <div class="card" style="width:18rem;height:20rem;">
+                            <div class="card" style="width:18rem;height:20rem;margin-left: 0;">
                                   <div class="card-body">
                                       <h5 class="card-title">{{ x.name }}</h5>
                                       <h6 class="card-subtitle mb-2 text-muted">{{ x.degree }} - {{ x.department }}</h6>

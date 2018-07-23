@@ -27,28 +27,26 @@ def submit_info(request):
         form = AlumniInfoForm()
     return render(request,template_name= 'submit.html',context={'form':form})
 
-class ListFeed(ListView):
-
-    model = AlumniInfo
-    paginate_by = 15
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
+'''
+    class ListFeed(ListView):
+        model = AlumniInfo
+        paginate_by = 15
+    
+        def get_context_data(self, **kwargs):
+            context = super().get_context_data(**kwargs)
+            return context
+'''
 
 def listfeed(request):
+    search_term=''
     object_list=AlumniInfo.objects.all()
-    return render(request, template_name='ListFeed.html', context={'object_list': object_list})
+    if 'search' in request.GET:
+        search_term=request.GET['search']
+        object_list=AlumniInfo.objects.filter(name__icontains=search_term)
+    return render(request, template_name='ListFeed.html', context={'object_list': object_list,'search_term':search_term})
 
 
 def profile(request,id):
 
    record=AlumniInfo.objects.get(id=id)
    return render(request,template_name='profile.html',context={'record':record})
-   # return HttpResponse('Hi this is a profile of {}'.format(name))
-
-
-def search(request):
-    alumni_list = AlumniInfo.objects.all()
-    alumni_filter = AlumniInfoFilter(request.GET, queryset=alumni_list)
-    return render(request, 'search.html', {'filter': alumni_filter})
