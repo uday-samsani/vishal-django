@@ -45,7 +45,7 @@ class AlumniInfo(models.Model):
     github = models.CharField(max_length=50,validators=[git_regex])
     working_as = models.CharField(max_length=20)
     phn_no = models.CharField(validators=[phn_regex],max_length=10, default=0)
-    description = models.TextField(max_length=25,null=True, blank=True)
+    description = models.TextField(max_length=120,null=True, blank=True)
     passed_out = models.PositiveIntegerField(default=2012)
     def __str__(self):
         return "name : {},registration number : {}".format(self.name,self.reg_no)
