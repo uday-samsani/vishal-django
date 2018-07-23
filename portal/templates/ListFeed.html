@@ -83,7 +83,7 @@
                                       <p class="card-text">{{ x.description }}</p>
                                       <p class="card-text">passed out : {{x.passed_out }}</p>
                                       <div class="card-footer bg-transparent border-success">
-                                          <a href="{% url 'profile' x.name %}" class="card-link">View</a>
+                                          <a href="{% url 'profile' x.id %}" class="card-link">View</a>
                                           <a href="{{ x.github }}" class="card-link">Linkedin</a>
                                           <a href="{{ x.linkedin }}" class="card-link">Github</a>
                                       </div>

@@ -9,11 +9,13 @@
     <!--Fevicon added-->
     {% load static %}
     <link rel="icon" href="{% static 'portal/images/fevicon.png' %}" type="image/png">
+    {% load static %}
+    <link rel="icon" href="{% static 'portal/images/fevicon.png' %}" type="image/png">
     <!-- Latest compiled and minified CSS -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'portal/css/bootstrap.min.css' %}">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portal/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/profiles.css' %}">
     <!-- jQuery library -->
     {% load static %}
     <script src='{% static 'portal/js/jquery.min.js' %}' ></script>
@@ -69,10 +71,50 @@
 
     <div class="mycontent">
         <div class="container">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-
-                    <h1 class="display-4 ">{{ record.name }} : </h1>
+            <div class="jumbotron jumbotron-fluid myjumbo">
+                <div class="container mycont">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="display-4 ">Profile </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <h6>Name : </h6><p>{{ record.name }}</p>
+                            <h6>Degree : </h6><p>{{ record.degree }}</p>
+                            <h6>Department : </h6><p>{{ record.department }}</p>
+                        </div>
+                        <div class="col-7">
+                            <h6>Bio : </h6>
+                            <p>{{ record.description }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                           <h6>Registration Number : </h6><p>{{ record.id }}</p>
+                            <h6>Mail id : </h6><p>{{ record.mail_id }}</p>
+                        </div>
+                        <div class="col-6">
+                            <h6>Phone number : </h6><p>{{ record.ph_no }}</p>
+                            <h6>Passed out : </h6><p>{{ record.passed_out }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h6>Working in : </h6><p>{{ record.company }}</p>
+                            <h6>Workign as : </h6><p>{{ reocrd.working_as }}</p>
+                        </div>
+                        <div class="col-6">
+                            <h6>experience : </h6><p>{{ record.experience }}</p>
+                            <h6>Currently living at : </h6><p>{{ record.location }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Linkedin profile : </h6><p>{{ record.linkedin }}</p>
+                            <h6>Github repository : </h6><p>{{ record.github }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

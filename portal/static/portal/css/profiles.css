@@ -33,14 +33,7 @@ h2{
     text-align: right;
 }
 
-.mybody{
-    padding: 1em 0;
-}
-
-.col{
+.mycontent{
     padding: 0.5em;
 }
-.card{
-    padding: 0 0.5em;
-    margin: 0 2em;
-}
+

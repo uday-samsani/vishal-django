@@ -44,9 +44,9 @@ class ListDetailed(DetailView):
         context = super().get_context_data(**kwargs)
         return context
 '''
-def profile(request,name):
+def profile(request,id):
 
-   record=AlumniInfo.objects.get(name=name)
+   record=AlumniInfo.objects.get(id=id)
    return render(request,template_name='profile.html',context={'record':record})
    # return HttpResponse('Hi this is a profile of {}'.format(name))
 
