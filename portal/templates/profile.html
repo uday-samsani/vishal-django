@@ -74,17 +74,21 @@
     <div class="mycontent">
         <div class="container">
             <div class="jumbotron jumbotron-fluid myjumbo">
-                <div class="container mycont">
+                <div class="mycont">
                     <div class="row">
                         <div class="col">
                             <h1 class="display-4 ">Profile </h1>
+                            <hr>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-5">
-                            <h6>Name : </h6><p>{{ record.name }}</p>
-                            <h6>Degree : </h6><p>{{ record.degree }}</p>
-                            <h6>Department : </h6><p>{{ record.department }}</p>
+                            <h6>Name : {{ record.name }}</h6>
+                            <p></p>
+                            <h6>Degree : {{ record.degree }} </h6>
+                            <p></p>
+                            <h6><span class="heading">Department</span> : {{ record.department }}</h6>
+                            <p></p>
                         </div>
                         <div class="col-7">
                             <h6>Bio : </h6>
@@ -92,29 +96,39 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
-                           <h6>Registration Number : </h6><p>{{ record.reg_no }}</p>
-                            <h6>Mail id : </h6><p>{{ record.mail_id }}</p>
+                        <div class="col-5">
+                           <h6>Registration Number : {{ record.reg_no }}</h6>
+                            <p></p>
+                            <h6>Mail id : {{ record.mail_id }}</h6>
+                            <p></p>
                         </div>
-                        <div class="col-6">
-                            <h6>Phone number : </h6><p>{{ record.phn_no }}</p>
-                            <h6>Passed out : </h6><p>{{ record.passed_out }}</p>
+                        <div class="col-7">
+                            <h6>Phone number : {{ record.phn_no }}</h6>
+                            <p></p>
+                            <h6>Passed out : {{ record.passed_out }}</h6>
+                            <p></p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
-                            <h6>Working in : </h6><p>{{ record.company }}</p>
-                            <h6>Workign as : </h6><p>{{ record.working_as }}</p>
+                        <div class="col-5">
+                            <h6>Working in : {{ record.company }}</h6>
+                            <p></p>
+                            <h6>Workign as : {{ record.working_as }}</h6>
+                            <p></p>
                         </div>
-                        <div class="col-6">
-                            <h6>experience : </h6><p>{{ record.experience }}</p>
-                            <h6>Currently living at : </h6><p>{{ record.location }}</p>
+                        <div class="col-7">
+                            <h6>experience : {{ record.experience }}</h6>
+                            <p></p>
+                            <h6>Currently living at : {{ record.location }}</h6>
+                            <p></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h6>Linkedin profile : </h6><p>{{ record.linkedin }}</p>
-                            <h6>Github repository : </h6><p>{{ record.github }}</p>
+                            <h6>Linkedin profile : {{ record.linkedin }}</h6>
+                            <p></p>
+                            <h6>Github repository : {{ record.github }}</h6>
+                            <p></p>
                         </div>
                     </div>
                 </div>
