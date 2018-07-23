@@ -28,7 +28,7 @@ dept_choice = (
 
 
 class AlumniInfo(models.Model):
-    email_regex = RegexValidator(regex=r'^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}')
+    email_regex = RegexValidator(regex=r'^\w+@[a-zA-Z_.]+?\.[a-zA-Z]{2,6}')
     phn_regex=RegexValidator(regex=r'^[0-9]{10}')
     regno_regex=RegexValidator(regex=r'^[0-9A-Z-]+')
     linkin_regex=RegexValidator(regex=r'^\w+://+www.linkedin.com+')
