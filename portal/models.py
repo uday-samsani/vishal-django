@@ -32,7 +32,7 @@ class AlumniInfo(models.Model):
     phn_regex=RegexValidator(regex=r'^[0-9]{10}')
     regno_regex=RegexValidator(regex=r'^[0-9A-Z-]+')
     linkin_regex=RegexValidator(regex=r'^\w+://+www.linkedin.com+')
-    git_regex=RegexValidator(regex=r'\w+://+.github.com+')
+    git_regex=RegexValidator(regex=r'\w+://github.com+')
     name = models.CharField(max_length=20)
     reg_no = models.CharField(max_length=11,validators=[regno_regex])
     mail_id = models.CharField(max_length=35,validators=[email_regex])
