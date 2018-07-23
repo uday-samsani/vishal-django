@@ -4,6 +4,7 @@ from .models import AlumniInfo
 from .forms import AlumniInfoForm
 from django.views.generic import ListView,DetailView
 from django.db.models import Subquery
+from .filters import AlumniInfoFilter
 
 def index(request):
     count=AlumniInfo.objects.all().count()
@@ -51,4 +52,7 @@ def profile(request,id):
    # return HttpResponse('Hi this is a profile of {}'.format(name))
 
 
-
+def search(request):
+    alumni_list = AlumniInfo.objects.all()
+    alumni_filter = AlumniInfoFilter(request.GET, queryset=alumni_list)
+    return render(request, 'search.html', {'filter': alumni_filter})

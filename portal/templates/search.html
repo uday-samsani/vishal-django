@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+<form method="get">
+    {{ filter.form.as_p }}
+    {{ filter.groups }}
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+  {% for user in filter.qs %}
+    <li> {{ user.name }}</li>
+  {% endfor %}
+  </ul>
+
+</body>
+</html>

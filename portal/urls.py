@@ -6,6 +6,12 @@ urlpatterns=[
     path('submit/',portalView.submit_info,name='submit_info'),
     path('thanks/',portalView.thanks,name='thanks'),
     path('ListFeed/',portalView.ListFeed.as_view(template_name='ListFeed.html'),name='list-feed'),
+<<<<<<< HEAD
     path(r'profile/(?P<id>\d+).$',portalView.profile,name='profile')
+=======
+    path(r'profile/(?P<name>\d+).$',portalView.profile,name='profile'),
+    path(r'search/', portalView.search, name='search'),
+
+>>>>>>> 8b473ab4b8f9f2ec652e713ee3ba0531e5696321
     # path('ListDetailed',portalView.ListDetailed.as_view(template_name=''))
 ]
