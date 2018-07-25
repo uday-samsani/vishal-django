@@ -117,7 +117,7 @@
                             <p></p>
                         </div>
                         <div class="col-7">
-                            <h6>experience : {{ record.experience }}</h6>
+                            <h6>Experience : {{ record.experience }}</h6>
                             <p></p>
                             <h6>Currently living at : {{ record.location }}</h6>
                             <p></p>
@@ -125,9 +125,9 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h6>Linkedin profile : {{ record.linkedin }}</h6>
+                            <h6>Linkedin profile : <a href ="{{ record.linkedin }}">{{ record.linkedin }}</a></h6>
                             <p></p>
-                            <h6>Github repository : {{ record.github }}</h6>
+                            <h6>Github repository : <a href="{{ record.github }}">{{ record.github }}</a></h6>
                             <p></p>
                         </div>
                     </div>

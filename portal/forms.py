@@ -6,12 +6,10 @@ class AlumniInfoForm(forms.ModelForm):
     class Meta:
         model=AlumniInfo
         fields=('name','reg_no',
-                'mail_id',
-                'degree',
-                'department',
-                'company',
-                'experience',
-                'location','linkedin','github','working_as',
-                'phn_no',
-                'description','passed_out',
+                'department','degree',
+                'passed_out','phn_no',
+                'mail_id','company',
+                'working_as','experience',
+                'location','linkedin',
+                'github','description',
         )
