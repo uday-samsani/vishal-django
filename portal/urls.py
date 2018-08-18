@@ -9,5 +9,7 @@ urlpatterns=[
     # path(r'search/', portalView.search, name='search'),
     path(r'profile/(?P<id>\d+).$',portalView.profile,name='profile'),
     path(r'listfeed/',portalView.listfeed,name='listfeed'),
+    path('Login/',portalView.login,name='Login'),
+    path('signup/',portalView.signup,name='signup'),
 
 ]

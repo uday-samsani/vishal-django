@@ -35,6 +35,7 @@ class AlumniInfo(models.Model):
     regno_regex=RegexValidator(regex=r'^[0-9A-Za-z]')
     linkin_regex=RegexValidator(regex=r'^\w+://+www.linkedin.com+')
     git_regex=RegexValidator(regex=r'\w+://github.com+')
+    pw_regex=RegexValidator(regex=r'(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20}')
     name = models.CharField(max_length=36)
     reg_no = models.CharField(max_length=10,validators=[regno_regex])
     department = models.CharField(max_length=12, choices=dept_choice)
@@ -49,6 +50,7 @@ class AlumniInfo(models.Model):
     linkedin = models.CharField(max_length=50,validators=[linkin_regex])
     github = models.CharField(max_length=50,validators=[git_regex])
     description = models.TextField(max_length=120,null=True, blank=True)
+    password=models.CharField(max_length=16,null=True,blank=True,validators=[pw_regex])
 
     def __str__(self):
         return "name : {},registration number : {}".format(self.name,self.reg_no)

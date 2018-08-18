@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'portal',
+    'student',
 ]
 
 MIDDLEWARE = [

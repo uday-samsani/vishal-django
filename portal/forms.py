@@ -13,3 +13,8 @@ class AlumniInfoForm(forms.ModelForm):
                 'location','linkedin',
                 'github','description',
         )
+
+class UserCreationForm(forms.ModelForm):
+    class Meta:
+        model=AlumniInfo
+        fields=('name','reg_no','mail_id','password')
