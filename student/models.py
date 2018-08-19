@@ -2,6 +2,8 @@ from django.db import models
 
 from django.core.validators import RegexValidator
 
+
+
 courses_choice = (
     ('Bachelor Of Technology','Bachelor Of Technology'),
     ('Master Of Technology','Master Of Technology'),
